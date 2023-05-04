@@ -16,9 +16,9 @@ public class Movement {
 		final int EAST = position.getX() + 1;
 		final int WEST = position.getX() - 1;
 		final int X_MIN = 0;
-		final int X_MAX = 20;
+		final int X_MAX = map.get(position.getY()).length();
 		final int Y_MIN = 0;
-		final int Y_MAX = 20;
+		final int Y_MAX = map.size();
 		final int X_POSITION = position.getX();
 		final int Y_POSITION = position.getY();
 		
