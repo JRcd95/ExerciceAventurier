@@ -28,24 +28,24 @@ public class Movement {
 		 */
 		switch(direction) {
 			case 'N':
-				if(WOOD != map.get(NORTH).charAt(X_POSITION) && Y_POSITION > X_MIN) {
+				if(WOOD != map.get(NORTH).charAt(X_POSITION) && NORTH >= Y_MIN) {
 					position.setY(NORTH);
 				}
 				break;
 			case 'S':
-				if(WOOD != map.get(SOUTH).charAt(X_POSITION) && Y_POSITION < Y_MAX) {
+				if(WOOD != map.get(SOUTH).charAt(X_POSITION) && SOUTH <= Y_MAX) {
 					position.setY(SOUTH);
 				}
 				break;
 				
 			case 'E':
-				if(WOOD != map.get(Y_POSITION).charAt(EAST) && X_POSITION < X_MAX) {
+				if(WOOD != map.get(Y_POSITION).charAt(EAST) && EAST <= X_MAX) {
 					position.setX(EAST);
 				}
 				break;
 				
 			case 'O':
-				if(WOOD != map.get(Y_POSITION).charAt(WEST) && X_POSITION > Y_MIN) {
+				if(WOOD != map.get(Y_POSITION).charAt(WEST) && WEST >= X_MIN) {
 					position.setX(WEST);
 				}
 				break;
